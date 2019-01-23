@@ -9,7 +9,7 @@ public class EcofontTeste {
 		
 		EcofontFrame eco = new EcofontFrame();
 		eco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		eco.setSize(400, 400);
+		eco.setSize(1000, 700);
 		eco.setVisible(true);
 	}
 
