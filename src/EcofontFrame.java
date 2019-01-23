@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
@@ -17,6 +18,8 @@ public class EcofontFrame extends JFrame{
 	JButton botaoAumentar;
 	JButton botaoDiminuir;
 	JTextArea campoEcofont;
+	
+	JLabel labelTamanho;
 	
 	public EcofontFrame() {
 		
@@ -32,12 +35,13 @@ public class EcofontFrame extends JFrame{
 		panelBotoes.add(botaoAumentar);
 		panelBotoes.add(botaoDiminuir);
 		
-		
 		campoEcofont = new JTextArea();
 		campoEcofont.setFont(new Font("Serif", Font.BOLD, 10));
 		
-		add(campoEcofont);
+		labelTamanho = new JLabel();
+		
 		add(campoEcofont, BorderLayout.CENTER);
+		add(labelTamanho, BorderLayout.SOUTH);
 		
 		botaoAumentar.addActionListener(
 				
@@ -47,6 +51,7 @@ public class EcofontFrame extends JFrame{
 					public void actionPerformed(ActionEvent arg0) {
 						
 						campoEcofont.setFont(new Font("Serif", Font.BOLD, campoEcofont.getFont().getSize() + 1));
+						labelTamanho.setText("Tamanho da fonte: " +campoEcofont.getFont().getSize());
 						
 						repaint();
 					}
@@ -64,6 +69,7 @@ public class EcofontFrame extends JFrame{
 					public void actionPerformed(ActionEvent arg0) {
 						
 						campoEcofont.setFont(new Font("Serif", Font.BOLD, campoEcofont.getFont().getSize() - 1));
+						labelTamanho.setText("Tamanho da fonte: " +campoEcofont.getFont().getSize());
 						
 						repaint();
 					}
@@ -72,6 +78,7 @@ public class EcofontFrame extends JFrame{
 				}
 				
 		);
+		
 	}
 	
 	
