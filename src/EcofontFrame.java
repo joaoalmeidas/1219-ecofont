@@ -38,7 +38,7 @@ public class EcofontFrame extends JFrame{
 		campoEcofont = new JTextArea();
 		campoEcofont.setFont(new Font("Serif", Font.BOLD, 10));
 		
-		labelTamanho = new JLabel();
+		labelTamanho = new JLabel("Tamanho da fonte: "+campoEcofont.getFont().getSize());
 		
 		add(campoEcofont, BorderLayout.CENTER);
 		add(labelTamanho, BorderLayout.SOUTH);
