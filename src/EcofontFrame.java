@@ -36,7 +36,7 @@ public class EcofontFrame extends JFrame{
 		panelBotoes.add(botaoDiminuir);
 		
 		campoEcofont = new JTextArea();
-		campoEcofont.setFont(new Font("Serif", Font.BOLD, 10));
+		campoEcofont.setFont(new Font("Spranq eco sans", Font.PLAIN, 10));
 		
 		labelTamanho = new JLabel("Tamanho da fonte: "+campoEcofont.getFont().getSize());
 		
@@ -50,7 +50,7 @@ public class EcofontFrame extends JFrame{
 					@Override
 					public void actionPerformed(ActionEvent arg0) {
 						
-						campoEcofont.setFont(new Font("Serif", Font.BOLD, campoEcofont.getFont().getSize() + 1));
+						campoEcofont.setFont(new Font("Spranq eco sans", Font.PLAIN, campoEcofont.getFont().getSize() + 1));
 						labelTamanho.setText("Tamanho da fonte: " +campoEcofont.getFont().getSize());
 						
 						repaint();
@@ -68,7 +68,7 @@ public class EcofontFrame extends JFrame{
 					@Override
 					public void actionPerformed(ActionEvent arg0) {
 						
-						campoEcofont.setFont(new Font("Serif", Font.BOLD, campoEcofont.getFont().getSize() - 1));
+						campoEcofont.setFont(new Font("Spranq eco sans", Font.PLAIN, campoEcofont.getFont().getSize() - 1));
 						labelTamanho.setText("Tamanho da fonte: " +campoEcofont.getFont().getSize());
 						
 						repaint();
